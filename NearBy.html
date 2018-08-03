@@ -29,6 +29,9 @@
     <!-- Star link -->
     <link rel="stylesheet" href="css/extra.css">
 
+    <!-- notification-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -96,12 +99,16 @@
                 <div class="col-md-3 clearfix">
                     <div class="header-ctn">
                         <!-- Wishlist -->
-                        <div>
-                            <a href="#">
-                                <i class="fa fa-heart-o"></i>
-                                <span>Your Wishlist</span>
-                                <div class="qty">2</div>
-                            </a>
+                        <div id="noti_Counter"></div>   <!--SHOW NOTIFICATIONS COUNT.-->
+
+                        <!--A CIRCLE LIKE BUTTON TO DISPLAY NOTIFICATION DROPDOWN.-->
+                        <div id="noti_Button"></div>
+
+                        <!--THE NOTIFICAIONS DROPDOWN BOX.-->
+                        <div id="notifications">
+                            <h6>Notifications</h6>
+                            <div style="height:300px;"></div>
+                            <div class="seeAll"><a href="seeAll.html">See All</a></div>
                         </div>
                         <!-- /Wishlist -->
 
@@ -228,6 +235,54 @@
 <script src="js/nouislider.min.js"></script>
 <script src="js/jquery.zoom.min.js"></script>
 <script src="js/main.js"></script>
+
+
+
+
+
+<script>
+    $(document).ready(function () {
+
+        // ANIMATEDLY DISPLAY THE NOTIFICATION COUNTER.
+        $('#noti_Counter')
+            .css({ opacity: 0 })
+            .text('7')      // ADD DYNAMIC VALUE (YOU CAN EXTRACT DATA FROM DATABASE OR XML).
+            .css({ top: '-10px' })
+            .animate({ top: '-2px', opacity: 1 }, 500);
+
+        $('#noti_Button').click(function () {
+
+            // TOGGLE (SHOW OR HIDE) NOTIFICATION WINDOW.
+            $('#notifications').fadeToggle('fast', 'linear', function () {
+                if ($('#notifications').is(':hidden')) {
+                    $('#noti_Button').css('background-color', '#FFF');
+                }
+                // CHANGE BACKGROUND COLOR OF THE BUTTON.
+                else $('#noti_Button').css('background-color', '#FFF');
+            });
+
+            $('#noti_Counter').fadeOut('slow');     // HIDE THE COUNTER.
+
+            return false;
+        });
+
+        // HIDE NOTIFICATIONS WHEN CLICKED ANYWHERE ON THE PAGE.
+        $(document).click(function () {
+            $('#notifications').hide();
+
+            // CHECK IF NOTIFICATION COUNTER IS HIDDEN.
+            if ($('#noti_Counter').is(':hidden')) {
+                // CHANGE BACKGROUND COLOR OF THE BUTTON.
+                $('#noti_Button').css('background-color', '#FFF');
+            }
+        });
+
+        $('#notifications').click(function () {
+            return false;       // DO NOTHING WHEN CONTAINER IS CLICKED.
+        });
+    });
+</script>
+
 
 </body>
 </html>

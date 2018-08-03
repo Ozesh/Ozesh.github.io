@@ -29,6 +29,9 @@
     <!-- Star link -->
     <link rel="stylesheet" href="css/extra.css">
 
+    <!-- notification-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -51,6 +54,7 @@
             </ul>
             <ul class="header-links pull-right">
                 <li><a href="Login.html"><i class="fa fa-user-o"></i> My Account</a></li>
+
             </ul>
         </div>
     </div>
@@ -94,12 +98,16 @@
                 <div class="col-md-3 clearfix">
                     <div class="header-ctn">
                         <!-- Wishlist -->
-                        <div>
-                            <a href="#">
-                                <i class="fa fa-heart-o"></i>
-                                <span>Your Wishlist</span>
-                                <div class="qty">2</div>
-                            </a>
+                        <div id="noti_Counter"></div>   <!--SHOW NOTIFICATIONS COUNT.-->
+
+                        <!--A CIRCLE LIKE BUTTON TO DISPLAY NOTIFICATION DROPDOWN.-->
+                        <div id="noti_Button"></div>
+
+                        <!--THE NOTIFICAIONS DROPDOWN BOX.-->
+                        <div id="notifications">
+                            <h6>Notifications</h6>
+                            <div style="height:300px;"></div>
+                            <div class="seeAll"><a href="seeAll.html">See All</a></div>
                         </div>
                         <!-- /Wishlist -->
 
@@ -132,7 +140,7 @@
         <div id="responsive-nav">
             <!-- NAV -->
             <ul class="main-nav nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
+                <li class="active"><a href="index.html">Home</a></li>
 
                 <li><a href="Offer.html">Offers</a></li>
                 <li><a href="NearBy.html">Near By</a></li>
@@ -156,7 +164,7 @@
             <!-- section title -->
             <div class="col-md-12">
                 <div class="section-title">
-                    <h3 class="title">Top Trending</h3>
+                    <h3 class="title">ALL OFFERS</h3>
 
                 </div>
             </div>
@@ -172,9 +180,9 @@
                                 <!-- product -->
                                 <div class="product">
                                     <div class="product-img">
-                                        <img src="./img/2.jpg" alt="">
+                                        <img src="./img/food1.jpg" alt="">
                                         <div class="product-label">
-                                            <span class="sale">-30%</span>
+
                                             <span class="new">NEW</span>
                                         </div>
                                     </div>
@@ -195,7 +203,7 @@
                                 <!-- product -->
                                 <div class="product">
                                     <div class="product-img">
-                                        <img src="./img/3.jfif" alt="">
+                                        <img src="./img/food2.jpg" alt="">
                                         <div class="product-label">
                                             <span class="new">NEW</span>
                                         </div>
@@ -218,7 +226,7 @@
                                 <!-- product -->
                                 <div class="product">
                                     <div class="product-img">
-                                        <img src="./img/4.jpg" alt="">
+                                        <img src="./img/food3.jpg" alt="">
                                         <div class="product-label">
                                             <span class="sale">-30%</span>
                                         </div>
@@ -240,7 +248,7 @@
                                 <!-- product -->
                                 <div class="product">
                                 <div class="product-img">
-                                    <img src="./img/1.png" alt="">
+                                    <img src="./img/food6.jpg" alt="">
                                 </div>
                                 <div class="product-body">
                                     <p class="product-category">Category</p>
@@ -260,7 +268,7 @@
 
                                 <div class="product">
                                     <div class="product-img">
-                                        <img src="./img/1.png" alt="">
+                                        <img src="./img/food4.jpg" alt="">
                                     </div>
                                     <div class="product-body">
                                         <p class="product-category">Category</p>
@@ -279,7 +287,7 @@
 
                                 <div class="product">
                                     <div class="product-img">
-                                        <img src="./img/1.png" alt="">
+                                        <img src="./img/food5.jpg" alt="">
                                     </div>
                                     <div class="product-body">
                                         <p class="product-category">Category</p>
@@ -414,6 +422,48 @@
 
 
 
+<script>
+    $(document).ready(function () {
+
+        // ANIMATEDLY DISPLAY THE NOTIFICATION COUNTER.
+        $('#noti_Counter')
+            .css({ opacity: 0 })
+            .text('7')      // ADD DYNAMIC VALUE (YOU CAN EXTRACT DATA FROM DATABASE OR XML).
+            .css({ top: '-10px' })
+            .animate({ top: '-2px', opacity: 1 }, 500);
+
+        $('#noti_Button').click(function () {
+
+            // TOGGLE (SHOW OR HIDE) NOTIFICATION WINDOW.
+            $('#notifications').fadeToggle('fast', 'linear', function () {
+                if ($('#notifications').is(':hidden')) {
+                    $('#noti_Button').css('background-color', '#FFF');
+                }
+                // CHANGE BACKGROUND COLOR OF THE BUTTON.
+                else $('#noti_Button').css('background-color', '#FFF');
+            });
+
+            $('#noti_Counter').fadeOut('slow');     // HIDE THE COUNTER.
+
+            return false;
+        });
+
+        // HIDE NOTIFICATIONS WHEN CLICKED ANYWHERE ON THE PAGE.
+        $(document).click(function () {
+            $('#notifications').hide();
+
+            // CHECK IF NOTIFICATION COUNTER IS HIDDEN.
+            if ($('#noti_Counter').is(':hidden')) {
+                // CHANGE BACKGROUND COLOR OF THE BUTTON.
+                $('#noti_Button').css('background-color', '#FFF');
+            }
+        });
+
+        $('#notifications').click(function () {
+            return false;       // DO NOTHING WHEN CONTAINER IS CLICKED.
+        });
+    });
+</script>
 
 
 
