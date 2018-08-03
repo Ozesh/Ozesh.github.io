@@ -6,11 +6,11 @@ body {
     padding: 0;
 
     height: 150vh;
-    background-color: #17a2b8;
 }
 
 #login{
     background-color: #17a2b8;
+
 }
 
 #login-row #login-column #login-box {
@@ -24,6 +24,7 @@ body {
 
   #login-row #login-column #login-box #login-form {
     padding: 20px;
+
 }
 
   #login-row #login-column #login-box #login-form #register-link {
@@ -171,7 +172,7 @@ label.star:before {
     display:none;
     width:313px;
     position:absolute;
-    left:-89px;
+    left:0px;
     background:#FFF;
     border:solid 1px rgba(100, 100, 100, .20);
     -webkit-box-shadow:0 3px 8px rgba(0, 0, 0, .20);
