@@ -5,7 +5,8 @@ body {
     margin: 0;
     padding: 0;
 
-    height: 100vh;
+    height: 150vh;
+    background-color: #17a2b8;
 }
 
 #login{
