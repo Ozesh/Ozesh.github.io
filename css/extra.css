@@ -214,7 +214,7 @@ label.star:before {
 
 /* quick view */
 
-.product_view .modal-dialog{max-width: 800px; width: 90%;}
+.product_view .modal-dialog{max-width: 800px; }
 .pre-cost{text-decoration: line-through; color: #a5a5a5;}
 .space-ten{padding: 10px 0;}
 
