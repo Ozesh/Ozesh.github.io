@@ -659,7 +659,9 @@ textarea.input {
     display: inline-block;
   }
   #responsive-nav {
+
     position: fixed;
+    display: inline;
     left: 0;
     top: 0;
     background: #20bf6b;
@@ -1397,6 +1399,9 @@ textarea.input {
 	Product details
 \*----------------------------*/
 
+.product-details {
+    margin-top:20px;
+}
 .product-details .product-name {
   text-transform: uppercase;
   font-size: 18px;

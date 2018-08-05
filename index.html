@@ -37,6 +37,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 
 
+
+
+    <!-- quick view-->
+
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -72,7 +77,7 @@
                 <!-- LOGO -->
                 <div class="col-md-3">
                     <div class="header-logo">
-                        <a href="#" class="logo">
+                        <a href="index.html" class="logo">
                             <img src="./img/logo.png" alt="">
                         </a>
                     </div>
@@ -116,6 +121,15 @@
                         <!-- /Wishlist -->
 
 
+                        <div>
+                            <a href="wishList.html">
+                                <i class="fa fa-heart-o"></i>
+                                <span>Your Wishlist</span>
+                                <div class="qty">2</div>
+                            </a>
+                        </div>
+
+
                         <!-- Menu Toogle -->
                         <div class="menu-toggle">
                             <a href="#">
@@ -145,9 +159,11 @@
             <!-- NAV -->
             <ul class="main-nav nav navbar-nav">
                 <li><a href="index.html">Home</a></li>
+                <li><a href="Offer.html">Offer</a></li>
+                <li><a href="NearBy.html">NearBy</a></li>
 
-                <li><a href="Offer.html">Offers</a></li>
-                <li><a href="NearBy.html">Near By</a></li>
+                <li><a href="#">Setting</a></li>
+                <li><a href="teasureBox.html">Treasure Box</a></li>
 
             </ul>
             <!-- /NAV -->
@@ -156,7 +172,8 @@
     </div>
     <!-- /container -->
 </nav>
-<!-- /NAVIGATION -->
+
+
 
 <!-- SECTION -->
 <div class="section">
@@ -172,7 +189,7 @@
                     </div>
                     <div class="shop-body">
                         <h3>Food<br>Collection</h3>
-                        <a href="#" class="cta-btn">Eat Now <i class="fa fa-arrow-circle-right"></i></a>
+                        <a href="foodCollection.html" class="cta-btn">Eat Now <i class="fa fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -186,7 +203,7 @@
                     </div>
                     <div class="shop-body">
                         <h3>Offer<br>Collection</h3>
-                        <a href="#" class="cta-btn">Eat now <i class="fa fa-arrow-circle-right"></i></a>
+                        <a href="offerCollection.html" class="cta-btn">Eat now <i class="fa fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -199,7 +216,7 @@
                     </div>
                     <div class="shop-body">
                         <h3>Other<br>Collection</h3>
-                        <a href="#" class="cta-btn">Eat now <i class="fa fa-arrow-circle-right"></i></a>
+                        <a href="otherCollection.html" class="cta-btn">Eat now <i class="fa fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -247,7 +264,7 @@
                                     </div>
                                     <div class="product-body">
                                         <p class="product-category">Category</p>
-                                        <h3 class="product-name"><a href="#">Pasta</a></h3>
+                                        <h3 class="product-name"><a href="items.html">Pasta</a></h3>
                                         <h4 class="product-price">30% Discount </h4>
 
                                         <div class="stars">
@@ -266,9 +283,11 @@
                                         </div>
                                         <div class="product-btns">
                                             <button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
-                                            <button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
+                                            <button   class="quick-view"><i class="fa fa-eye" data-toggle="modal" data-target="#product_view"></i> </button>
+
 
                                         </div>
+
                                     </div>
 
                                 </div>
@@ -284,7 +303,7 @@
                                     </div>
                                     <div class="product-body">
                                         <p class="product-category">Category</p>
-                                        <h3 class="product-name"><a href="#">Grill Meate</a></h3>
+                                        <h3 class="product-name"><a href="items.html">Grill Meate</a></h3>
                                         <h4 class="product-price">30% Discount </h4>
 
                                         <div class="stars">
@@ -304,7 +323,7 @@
                                         <div class="product-btns">
                                             <button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
 
-                                            <button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
+                                            <button   class="quick-view"><i class="fa fa-eye" data-toggle="modal" data-target="#product_view"></i> </button>
                                         </div>
                                     </div>
 
@@ -321,7 +340,7 @@
                                     </div>
                                     <div class="product-body">
                                         <p class="product-category">Category</p>
-                                        <h3 class="product-name"><a href="#">Burger</a></h3>
+                                        <h3 class="product-name"><a href="items.html">Burger</a></h3>
                                         <h4 class="product-price">30% Discount </h4>
 
                                         <div class="stars">
@@ -340,7 +359,7 @@
                                         </div>
                                         <div class="product-btns">
                                             <button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
-                                            <button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
+                                            <button   class="quick-view"><i class="fa fa-eye" data-toggle="modal" data-target="#product_view"></i> </button>
                                         </div>
                                     </div>
 
@@ -354,7 +373,7 @@
                                     </div>
                                     <div class="product-body">
                                         <p class="product-category">Category</p>
-                                        <h3 class="product-name"><a href="#">MO MO</a></h3>
+                                        <h3 class="product-name"><a href="items.html">MO MO</a></h3>
                                         <h4 class="product-price">30% Discount </h4>
 
                                         <div class="stars">
@@ -374,7 +393,7 @@
                                         <div class="product-btns">
                                             <button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
 
-                                            <button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
+                                            <button   class="quick-view"><i class="fa fa-eye" data-toggle="modal" data-target="#product_view"></i> </button>
                                         </div>
                                     </div>
 
@@ -404,7 +423,63 @@
 </div>
 <!-- /container -->
 
-<!-- /NEWSLETTER -->
+<!-- / Quick view Modal -->
+
+<div class="modal fade product_view" id="product_view">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a href="#" data-dismiss="modal" class="class pull-right"><span class="glyphicon glyphicon-remove"></span></a>
+                <h3 class="modal-title">HTML5 is a markup language</h3>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6 product_img">
+                        <img src="img/food5.jpg" class="img-responsive">
+                    </div>
+                    <div class="col-md-6 product_content">
+                        <h4>Product Id: <span>51526</span></h4>
+                        <div class="rating">
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            (10 reviews)
+                        </div>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <h3 class="cost"><span class="glyphicon glyphicon-usd"></span> 75.00 <small class="pre-cost"><span class="glyphicon glyphicon-usd"></span> 60.00</small></h3>
+                        <div class="row">
+                            <div class="col-md-4 col-sm-6 col-xs-12">
+                                <select class="form-control" name="select">
+                                    <option value="" selected="">Color</option>
+                                    <option value="black">Black</option>
+                                    <option value="white">White</option>
+                                    <option value="gold">Gold</option>
+                                    <option value="rose gold">Rose Gold</option>
+                                </select>
+                            </div>
+                            <!-- end col -->
+
+                            <!-- end col -->
+
+                            <!-- end col -->
+                        </div>
+                        <div class="space-ten"></div>
+                        <div class="btn-ground">
+                            <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-heart"></span> Add To Wishlist</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
 
 <!-- FOOTER -->
 <footer id="footer">
@@ -531,6 +606,13 @@
     });
 </script>
 
+
+
+<!-- /quick view -->
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+<script src="js/bootstrap.min.js"></script>
 
 
 
