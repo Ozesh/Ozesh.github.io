@@ -1,35 +1,16 @@
 /*  Login */
 
 
-body {
-    margin: 0;
-    padding: 0;
 
-    height: 150vh;
-}
 
-#login{
-    background-color: #17a2b8;
 
-}
 
-#login-row #login-column #login-box {
 
-    margin-top: 120px;
-    max-width: 600px;
-    height: 320px;
-    border: 1px solid #9C9C9C;
-    background-color: #EAEAEA;
-}
 
-  #login-row #login-column #login-box #login-form {
-    padding: 20px;
 
-}
+/*  Login */
 
-  #login-row #login-column #login-box #login-form #register-link {
-    margin-top: -85px;
-}
+
 
 div.stars {
     width: 225px;
@@ -233,7 +214,7 @@ label.star:before {
 
 /* quick view */
 
-.product_view .modal-dialog{max-width: 800px; width: 100%;}
+.product_view .modal-dialog{max-width: 800px; width: 92%;}
 .pre-cost{text-decoration: line-through; color: #a5a5a5;}
 .space-ten{padding: 10px 0;}
 
